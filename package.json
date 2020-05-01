@@ -8,7 +8,9 @@
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "private": true,
   "dependencies": {
@@ -39,7 +41,8 @@
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",
     "typescript": "2.0.10",
-    "zone.js": "^0.7.2"
+    "zone.js": "^0.7.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
@@ -58,5 +61,6 @@
     "tslint": "3.13.0",
     "typescript": "2.0.10",
     "webdriver-manager": "10.2.5"
-  }
+  },
+  "snyk": true
 }
